@@ -1,8 +1,19 @@
 export const navLinks = [
   { label: "About",        href: "#about" },
+  { label: "Impact",       href: "#impact" },
   { label: "Case Studies", href: "#case-studies" },
   { label: "Skills",       href: "#skills" },
+  { label: "Writing",      href: "#writing" },
   { label: "Contact",      href: "#contact" },
+]
+
+export const metrics = [
+  { stat: "9+",           label: "Years of analytics experience" },
+  { stat: "~5M",          label: "Trades processed per reporting cycle" },
+  { stat: "€1.6M",        label: "Annualised savings delivered" },
+  { stat: "3 FTE",        label: "Effort reduction enabled" },
+  { stat: "40K+",         label: "Exceptions classified by root-cause framework" },
+  { stat: "Multi-regime", label: "Regulatory reporting experience" },
 ]
 
 export const caseStudies = [
@@ -67,9 +78,26 @@ export const skillGroups = [
   },
 ]
 
+export const articles = [
+  {
+    title: "If You're New to Coding, Here's What Nobody Explains First",
+    url: "https://medium.com/the-developer-codex/if-youre-new-to-coding-here-s-what-nobody-explains-first-1aab3282dfbc",
+    publication: "The Developer Codex",
+  },
+  {
+    title: "Power BI Gateway Explained",
+    url: "https://medium.com/the-developer-codex/power-bi-gateway-explained-d72f9cd323f6",
+    publication: "The Developer Codex",
+  },
+  {
+    title: "Classification in Machine Learning",
+    url: "https://medium.com/neural-nomad/classification-in-machine-learning-a3d002383b27",
+    publication: "Neural Nomad",
+  },
+]
+
 export const contactLinks = [
-  { label: "Email",    href: "mailto:chinmay.s077@gmail.com",              display: "chinmay.s077@gmail.com",         external: false, download: false },
-  { label: "GitHub",   href: "https://github.com/bh7781",                   display: "github.com/bh7781",              external: true,  download: false },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/chinmay-shelke/", display: "linkedin.com/in/chinmay-shelke", external: true,  download: false },
-  { label: "Resume",   href: "/resume.pdf",                                  display: "Download PDF",                   external: false, download: true  },
+  { label: "Email",    href: "mailto:chinmay.s077@gmail.com",              display: "chinmay.s077@gmail.com",         external: false },
+  { label: "GitHub",   href: "https://github.com/bh7781",                   display: "github.com/bh7781",              external: true  },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/chinmay-shelke/", display: "linkedin.com/in/chinmay-shelke", external: true  },
 ]
