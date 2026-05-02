@@ -1,6 +1,6 @@
-import { contactLinks } from '../data'
+import ContactForm from './ContactForm'
 
-export default function Contact({ onRequestResume }) {
+export default function Contact({ contactIntent, onRequestResume }) {
   return (
     <section id="contact" className="pb-24 scroll-mt-14">
       <div className="flex items-center gap-4 mb-8">
@@ -12,30 +12,22 @@ export default function Contact({ onRequestResume }) {
       <p className="text-sm text-slate-400 leading-7 max-w-lg mb-8">
         Interested in analytics, AI/ML, automation, or data leadership roles? Let's connect.
       </p>
-      <div className="space-y-4 mb-8">
-        {contactLinks.map(({ label, href, display, external }) => (
-          <div key={label} className="flex items-baseline gap-6">
-            <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-widest w-16 shrink-0">
-              {label}
-            </span>
-            <a
-              href={href}
-              {...(external
-                ? { target: '_blank', rel: 'noopener noreferrer', 'aria-label': `${display} (opens in new tab)` }
-                : {})}
-              className="text-sm text-sky-400 hover:text-sky-300 transition-colors duration-150"
-            >
-              {display}
-            </a>
-          </div>
-        ))}
+      <div className="mb-8 rounded-xl border border-slate-800 bg-slate-900/70 p-5">
+        <p className="text-sm text-slate-300 leading-6">
+          I share my resume directly with genuine recruiters, hiring teams, and professional contacts.
+        </p>
+        <button
+          onClick={onRequestResume}
+          className="mt-4 text-sm font-medium text-white bg-sky-600 hover:bg-sky-500 rounded-lg px-5 py-2.5 transition-colors duration-150"
+        >
+          Request Resume
+        </button>
       </div>
-      <button
-        onClick={onRequestResume}
-        className="text-sm font-medium text-white bg-sky-600 hover:bg-sky-500 rounded-lg px-5 py-2.5 transition-colors duration-150"
-      >
-        Request Resume
-      </button>
+      <ContactForm
+        key={contactIntent.focusKey}
+        focusKey={contactIntent.focusKey}
+        initialPurpose={contactIntent.purpose}
+      />
     </section>
   )
 }

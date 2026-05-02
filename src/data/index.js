@@ -111,9 +111,3 @@ export const articles = [
     description: "A practical introduction to classification problems in machine learning.",
   },
 ]
-
-export const contactLinks = [
-  { label: "Email", href: "mailto:chinmay.s077@gmail.com", display: "chinmay.s077@gmail.com", external: false },
-  { label: "GitHub", href: "https://github.com/bh7781", display: "github.com/bh7781", external: true },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/chinmay-shelke/", display: "linkedin.com/in/chinmay-shelke", external: true },
-]
