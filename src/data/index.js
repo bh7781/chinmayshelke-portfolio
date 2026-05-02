@@ -1,18 +1,19 @@
 export const navLinks = [
-  { label: "About",        href: "#about" },
-  { label: "Impact",       href: "#impact" },
+  { label: "About", href: "#about" },
+  { label: "Impact", href: "#impact" },
   { label: "Case Studies", href: "#case-studies" },
-  { label: "Skills",       href: "#skills" },
-  { label: "Writing",      href: "#writing" },
-  { label: "Contact",      href: "#contact" },
+  { label: "Skills", href: "#skills" },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Blogs", href: "#blogs" },
+  { label: "Contact", href: "#contact" },
 ]
 
 export const metrics = [
-  { stat: "9+",           label: "Years of analytics experience" },
-  { stat: "~5M",          label: "Trades processed per reporting cycle" },
-  { stat: "€1.6M",        label: "Annualised savings delivered" },
-  { stat: "3 FTE",        label: "Effort reduction enabled" },
-  { stat: "40K+",         label: "Exceptions classified by root-cause framework" },
+  { stat: "9+", label: "Years of analytics experience" },
+  { stat: "~5M", label: "Trades processed per reporting cycle" },
+  { stat: "EUR 1.6M", label: "Annualised savings delivered" },
+  { stat: "3 FTE", label: "Effort reduction enabled" },
+  { stat: "40K+", label: "Exceptions classified by root-cause framework" },
   { stat: "Multi-regime", label: "Regulatory reporting experience" },
 ]
 
@@ -78,26 +79,47 @@ export const skillGroups = [
   },
 ]
 
+export const certifications = [
+  {
+    title: "Data Analytics Professional Certificate",
+    issuer: "Credential issuer placeholder",
+    badgeUrl: "/favicon.svg",
+    credentialUrl: "https://www.credly.com/",
+  },
+  {
+    title: "AI and Machine Learning Certificate",
+    issuer: "Credential issuer placeholder",
+    badgeUrl: "/favicon.svg",
+    credentialUrl: "https://www.credly.com/",
+  },
+  {
+    title: "Business Intelligence Certificate",
+    issuer: "Credential issuer placeholder",
+    badgeUrl: "/favicon.svg",
+    credentialUrl: "https://www.credly.com/",
+  },
+]
+
 export const articles = [
   {
     title: "If You're New to Coding, Here's What Nobody Explains First",
     url: "https://medium.com/the-developer-codex/if-youre-new-to-coding-here-s-what-nobody-explains-first-1aab3282dfbc",
-    publication: "The Developer Codex",
+    description: "A beginner-friendly explanation of programming fundamentals before language syntax.",
   },
   {
     title: "Power BI Gateway Explained",
     url: "https://medium.com/the-developer-codex/power-bi-gateway-explained-d72f9cd323f6",
-    publication: "The Developer Codex",
+    description: "A simple explanation of Power BI Gateway for analytics and BI users.",
   },
   {
     title: "Classification in Machine Learning",
     url: "https://medium.com/neural-nomad/classification-in-machine-learning-a3d002383b27",
-    publication: "Neural Nomad",
+    description: "A practical introduction to classification problems in machine learning.",
   },
 ]
 
 export const contactLinks = [
-  { label: "Email",    href: "mailto:chinmay.s077@gmail.com",              display: "chinmay.s077@gmail.com",         external: false },
-  { label: "GitHub",   href: "https://github.com/bh7781",                   display: "github.com/bh7781",              external: true  },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/chinmay-shelke/", display: "linkedin.com/in/chinmay-shelke", external: true  },
+  { label: "Email", href: "mailto:chinmay.s077@gmail.com", display: "chinmay.s077@gmail.com", external: false },
+  { label: "GitHub", href: "https://github.com/bh7781", display: "github.com/bh7781", external: true },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/chinmay-shelke/", display: "linkedin.com/in/chinmay-shelke", external: true },
 ]

@@ -21,7 +21,7 @@ export default function Contact({ onRequestResume }) {
             <a
               href={href}
               {...(external
-                ? { target: '_blank', rel: 'noreferrer', 'aria-label': `${display} (opens in new tab)` }
+                ? { target: '_blank', rel: 'noopener noreferrer', 'aria-label': `${display} (opens in new tab)` }
                 : {})}
               className="text-sm text-sky-400 hover:text-sky-300 transition-colors duration-150"
             >

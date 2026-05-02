@@ -6,13 +6,13 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-sm border-b border-slate-800">
-      <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
         <span className="text-sm font-semibold text-white tracking-tight">
           Chinmay Shelke
         </span>
 
         {/* Desktop links */}
-        <ul className="hidden sm:flex gap-6 list-none p-0 m-0">
+        <ul className="hidden md:flex gap-5 list-none p-0 m-0">
           {navLinks.map(({ label, href }) => (
             <li key={href}>
               <a
@@ -27,9 +27,11 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden text-slate-400 hover:text-white transition-colors"
+          className="md:hidden text-slate-400 hover:text-white transition-colors"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,7 +47,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="sm:hidden border-t border-slate-800 bg-slate-950">
+        <div id="mobile-navigation" className="md:hidden border-t border-slate-800 bg-slate-950">
           <ul className="flex flex-col py-4 px-6 gap-4 list-none">
             {navLinks.map(({ label, href }) => (
               <li key={href}>
