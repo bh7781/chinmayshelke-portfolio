@@ -1,6 +1,6 @@
 # Chinmay Shelke Portfolio
 
-A premium, dark-slate portfolio built to present my work across data analytics, AI/ML, analytics automation, data quality, and regulatory reporting.
+A portfolio built to present my work across data analytics, AI/ML, analytics automation, data quality, and regulatory reporting.
 
 **Live site:** [chinmayshelke.com](https://chinmayshelke.com)
 
