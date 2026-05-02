@@ -1,41 +1,66 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Impact from './components/Impact'
-import CaseStudies from './components/CaseStudies'
+import Overview from './components/Overview'
+import CareerTimeline from './components/CareerTimeline'
+import ClientWork from './components/ClientWork'
 import Skills from './components/Skills'
 import Certifications from './components/Certifications'
 import Blogs from './components/Blogs'
 import Contact from './components/Contact'
 
 export default function App() {
+  const [activeView, setActiveView] = useState('overview')
   const [contactIntent, setContactIntent] = useState({ purpose: '', focusKey: 0 })
+
+  const navigateTo = (view) => {
+    setActiveView(view)
+    window.setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 0)
+  }
 
   const requestResume = () => {
     setContactIntent((current) => ({
       purpose: 'Resume Request',
       focusKey: current.focusKey + 1,
     }))
+    navigateTo('contact')
+  }
 
-    window.setTimeout(() => {
-      document.getElementById('contact')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    }, 0)
+  const renderView = () => {
+    if (activeView === 'timeline') return <CareerTimeline />
+    if (activeView === 'client-work') return <ClientWork />
+    if (activeView === 'skills') {
+      return (
+        <>
+          <Skills />
+          <Certifications />
+        </>
+      )
+    }
+    if (activeView === 'writing') return <Blogs />
+    if (activeView === 'contact') {
+      return (
+        <Contact
+          contactIntent={contactIntent}
+          onRequestResume={requestResume}
+        />
+      )
+    }
+
+    return (
+      <Overview
+        onNavigate={navigateTo}
+        onRequestResume={requestResume}
+      />
+    )
   }
 
   return (
-    <div className="min-h-screen bg-slate-950">
-      <Navbar />
-      <main className="max-w-5xl mx-auto px-6">
-        <Hero onRequestResume={requestResume} />
-        <Impact />
-        <CaseStudies />
-        <Skills />
-        <Certifications />
-        <Blogs />
-        <Contact contactIntent={contactIntent} onRequestResume={requestResume} />
+    <div className="min-h-screen bg-slate-950 text-slate-300">
+      <Navbar activeView={activeView} onNavigate={navigateTo} />
+      <main className="mx-auto min-h-[calc(100vh-3.5rem)] max-w-6xl px-5 sm:px-6">
+        {renderView()}
       </main>
     </div>
   )

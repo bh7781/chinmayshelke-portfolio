@@ -1,8 +1,9 @@
 import { certifications } from '../data'
+import SectionHeader from './SectionHeader'
 
 function CertificationCard({ title, issuer, badgeImage, credentialUrl }) {
   return (
-    <article className="bg-slate-900 border border-slate-800 rounded-xl p-5 sm:p-6 shadow-lg shadow-slate-950/20">
+    <article className="rounded-xl border border-slate-800 bg-slate-900 p-5 shadow-lg shadow-slate-950/20 sm:p-6">
       <div className="flex items-start gap-5">
         <img
           src={badgeImage}
@@ -10,7 +11,7 @@ function CertificationCard({ title, issuer, badgeImage, credentialUrl }) {
           className="h-20 w-20 shrink-0 rounded-lg border border-slate-700 bg-slate-950 object-contain p-2"
         />
         <div className="min-w-0">
-          <h3 className="text-sm font-semibold text-white leading-snug">
+          <h3 className="text-sm font-semibold leading-snug text-white">
             {title}
           </h3>
           <p className="mt-1 text-xs text-slate-400">{issuer}</p>
@@ -31,14 +32,13 @@ function CertificationCard({ title, issuer, badgeImage, credentialUrl }) {
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="pb-20 scroll-mt-14">
-      <div className="flex items-center gap-4 mb-8">
-        <h2 className="text-xs font-semibold text-sky-400 uppercase tracking-widest shrink-0">
-          Certifications
-        </h2>
-        <div className="flex-1 h-px bg-slate-800" />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section className="pb-16">
+      <SectionHeader
+        eyebrow="Credentials"
+        title="Signals of continued learning"
+        description="Selected certifications and credential-backed badges relevant to software, AI tooling, and development fundamentals."
+      />
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {certifications.map((certification) => (
           <CertificationCard key={certification.title} {...certification} />
         ))}

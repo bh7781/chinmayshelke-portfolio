@@ -7,7 +7,7 @@ A portfolio built to present my work across data analytics, AI/ML, analytics aut
 ## What This Portfolio Highlights
 
 - Lead Data Analyst positioning with a recruiter-friendly landing experience
-- Impact metrics and case studies for analytics, automation, and data quality work
+- Impact metrics and client project highlights for analytics, automation, and data quality work
 - Skills across Python, SQL, Snowflake, PySpark, Alteryx, Power BI, and ML workflows
 - Certifications with local badge assets linked to Credly credentials
 - Blog cards for technical writing and learning-focused articles
@@ -76,7 +76,7 @@ public/
   assets/                    # Profile and certification badge images
 src/
   components/                # Portfolio sections and reusable UI
-  data/                      # Navigation, case studies, skills, articles, certifications
+  data/                      # Navigation, timeline, client work, skills, articles, certifications
 ```
 
 ## Deployment
