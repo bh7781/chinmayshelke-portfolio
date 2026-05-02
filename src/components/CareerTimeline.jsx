@@ -52,8 +52,6 @@ function TimelineItem({ period, title, company, location, logo, summary, highlig
 }
 
 export default function CareerTimeline() {
-  const progression = careerTimeline.map(({ title }) => title)
-
   return (
     <section className="py-10 sm:py-14">
       <SectionHeader
@@ -61,23 +59,6 @@ export default function CareerTimeline() {
         title="From application development to analytics leadership."
         description="A progression through software delivery, regulatory data analysis, management information, automation, controls, and client-facing leadership."
       />
-      <div className="mb-9 rounded-xl border border-zinc-800 bg-zinc-950/75 p-4">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-violet-300">
-          Progression Path
-        </p>
-        <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-zinc-300">
-          {progression.map((role, index) => (
-            <span key={role} className="flex items-center gap-2">
-              <span className="rounded-lg border border-zinc-700 bg-zinc-900 px-2.5 py-1">
-                {role}
-              </span>
-              {index < progression.length - 1 && (
-                <span className="text-teal-300">/</span>
-              )}
-            </span>
-          ))}
-        </div>
-      </div>
       <div className="max-w-4xl">
         {careerTimeline.map((item) => (
           <TimelineItem key={`${item.company}-${item.title}-${item.period}`} {...item} />
