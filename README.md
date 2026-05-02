@@ -1,16 +1,88 @@
-# React + Vite
+# Chinmay Shelke Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, dark-slate portfolio built to present my work across data analytics, AI/ML, analytics automation, data quality, and regulatory reporting.
 
-Currently, two official plugins are available:
+**Live site:** [chinmayshelke.com](https://chinmayshelke.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What This Portfolio Highlights
 
-## React Compiler
+- Lead Data Analyst positioning with a recruiter-friendly landing experience
+- Impact metrics and case studies for analytics, automation, and data quality work
+- Skills across Python, SQL, Snowflake, PySpark, Alteryx, Power BI, and ML workflows
+- Certifications with local badge assets linked to Credly credentials
+- Blog cards for technical writing and learning-focused articles
+- Privacy-first contact and resume request flow backed by a Vercel serverless function
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS
+- Vercel
+- Resend for server-side contact email delivery
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Privacy-First Contact Flow
+
+The site does not expose a public email address, does not use `mailto:`, and does not publish a direct resume download. Visitors submit contact or resume requests through the form, which posts to a Vercel API route at `/api/contact`.
+
+Required local and Vercel environment variables:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+CONTACT_TO_EMAIL=your_private_receiving_email
+CONTACT_FROM_EMAIL="Portfolio <onboarding@resend.dev>"
+```
+
+Keep `.env.local` private. It is ignored by Git.
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the Vite development server:
+
+```bash
+npm run dev
+```
+
+Run with Vercel functions locally:
+
+```bash
+vercel dev
+```
+
+Check code quality:
+
+```bash
+npm run lint
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```text
+api/
+  contact.js                 # Vercel serverless contact endpoint
+public/
+  assets/                    # Profile and certification badge images
+src/
+  components/                # Portfolio sections and reusable UI
+  data/                      # Navigation, case studies, skills, articles, certifications
+```
+
+## Deployment
+
+The project is deployed on Vercel. Before deploying, configure the Resend environment variables in the Vercel dashboard under Project Settings -> Environment Variables.
+
+## About
+
+Built and maintained by [Chinmay Shelke](https://chinmayshelke.com).
