@@ -5,9 +5,9 @@ import SectionHeader from './SectionHeader'
 
 function PillarCard({ title, text }) {
   return (
-    <article className="rounded-xl border border-slate-800 bg-slate-900 p-5 sm:p-6">
-      <h3 className="text-sm font-semibold text-white">{title}</h3>
-      <p className="mt-3 text-sm leading-6 text-slate-400">{text}</p>
+    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6">
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <p className="mt-3 text-base leading-7 text-zinc-400">{text}</p>
     </article>
   )
 }

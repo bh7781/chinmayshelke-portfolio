@@ -3,11 +3,11 @@ import SectionHeader from './SectionHeader'
 
 function ArticleCard({ title, url, description }) {
   return (
-    <article className="rounded-xl border border-slate-800 bg-slate-900 p-5 transition-colors duration-150 hover:border-slate-700 sm:p-6">
-      <h3 className="text-base font-semibold leading-snug text-white">
+    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-150 hover:border-violet-600/60 sm:p-6">
+      <h3 className="text-xl font-semibold leading-snug text-white">
         {title}
       </h3>
-      <p className="mt-3 text-sm leading-6 text-slate-400">
+      <p className="mt-3 text-base leading-7 text-zinc-400">
         {description}
       </p>
       <a
@@ -15,7 +15,7 @@ function ArticleCard({ title, url, description }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`${title} on Medium (opens in new tab)`}
-        className="mt-5 inline-flex text-xs font-medium text-sky-400 transition-colors duration-150 hover:text-sky-300"
+        className="mt-5 inline-flex text-sm font-medium text-teal-300 transition-colors duration-150 hover:text-teal-200"
       >
         Read Article
       </a>

@@ -57,7 +57,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-300">
+    <div className="min-h-screen bg-[linear-gradient(135deg,#050505_0%,#0d1117_42%,#15101f_100%)] text-zinc-200">
       <Navbar activeView={activeView} onNavigate={navigateTo} />
       <main className="mx-auto min-h-[calc(100vh-3.5rem)] max-w-6xl px-5 sm:px-6">
         {renderView()}

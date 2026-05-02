@@ -5,11 +5,11 @@ function MetricCard({ stat, label }) {
   const isLong = stat.length > 5
 
   return (
-    <article className="rounded-xl border border-slate-800 bg-slate-900 p-5 sm:p-6">
+    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6">
       <p className={`mb-2 font-semibold leading-none tracking-tight text-white ${isLong ? 'text-xl sm:text-2xl' : 'text-3xl'}`}>
         {stat}
       </p>
-      <p className="text-xs leading-5 text-slate-400">{label}</p>
+      <p className="text-base leading-7 text-zinc-400">{label}</p>
     </article>
   )
 }

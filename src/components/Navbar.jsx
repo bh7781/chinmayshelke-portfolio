@@ -10,12 +10,12 @@ export default function Navbar({ activeView, onNavigate }) {
   }
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 border-b border-zinc-800/80 bg-black/75 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:px-6">
         <button
           type="button"
           onClick={() => handleNavigate('overview')}
-          className="text-left text-sm font-semibold tracking-tight text-white"
+          className="text-left text-base font-semibold tracking-tight text-white"
         >
           Chinmay Shelke
         </button>
@@ -30,10 +30,10 @@ export default function Navbar({ activeView, onNavigate }) {
                   type="button"
                   onClick={() => handleNavigate(id)}
                   aria-current={active ? 'page' : undefined}
-                  className={`rounded-lg px-3 py-2 text-xs font-medium transition-colors duration-150 ${
+                  className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-150 ${
                     active
-                      ? 'bg-slate-800 text-white'
-                      : 'text-slate-400 hover:bg-slate-900 hover:text-sky-400'
+                      ? 'bg-zinc-800 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-900 hover:text-teal-300'
                   }`}
                 >
                   {label}
@@ -45,7 +45,7 @@ export default function Navbar({ activeView, onNavigate }) {
 
         <button
           type="button"
-          className="text-slate-400 transition-colors hover:text-white md:hidden"
+          className="text-zinc-400 transition-colors hover:text-white md:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
@@ -64,7 +64,7 @@ export default function Navbar({ activeView, onNavigate }) {
       </div>
 
       {open && (
-        <div id="mobile-navigation" className="border-t border-slate-800 bg-slate-950 md:hidden">
+        <div id="mobile-navigation" className="border-t border-zinc-800 bg-black/95 md:hidden">
           <ul className="grid list-none gap-1 px-5 py-4">
             {navItems.map(({ id, label }) => {
               const active = activeView === id
@@ -77,8 +77,8 @@ export default function Navbar({ activeView, onNavigate }) {
                     aria-current={active ? 'page' : undefined}
                     className={`w-full rounded-lg px-3 py-2 text-left text-sm font-medium transition-colors duration-150 ${
                       active
-                        ? 'bg-slate-800 text-white'
-                        : 'text-slate-400 hover:bg-slate-900 hover:text-sky-400'
+                        ? 'bg-zinc-800 text-white'
+                        : 'text-zinc-400 hover:bg-zinc-900 hover:text-teal-300'
                     }`}
                   >
                     {label}

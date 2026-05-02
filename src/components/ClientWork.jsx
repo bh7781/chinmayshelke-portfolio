@@ -11,28 +11,28 @@ function ClientProjectCard({ title, domain, context, contribution, impact, tools
   const content = { context, contribution, impact }
 
   return (
-    <article className="rounded-xl border border-slate-800 bg-slate-900 p-5 transition-colors duration-150 hover:border-slate-700 sm:p-6">
-      <p className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-sky-400">
+    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-150 hover:border-violet-600/60 sm:p-6">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-teal-300">
         {domain}
       </p>
-      <h3 className="text-base font-semibold leading-snug text-white">
+      <h3 className="text-xl font-semibold leading-snug text-white">
         {title}
       </h3>
 
       <div className="mt-5 space-y-3">
         {rows.map(([label, key]) => (
-          <p key={label} className="text-sm leading-6 text-slate-400">
-            <span className="mr-1.5 font-semibold text-slate-200">{label}</span>
+          <p key={label} className="text-base leading-7 text-zinc-400">
+            <span className="mr-1.5 font-semibold text-zinc-100">{label}</span>
             {content[key]}
           </p>
         ))}
       </div>
 
-      <div className="mt-6 flex flex-wrap gap-1.5 border-t border-slate-800 pt-5">
+      <div className="mt-6 flex flex-wrap gap-1.5 border-t border-zinc-800 pt-5">
         {tools.map((tool) => (
           <span
             key={tool}
-            className="rounded border border-slate-700/70 bg-slate-800 px-2.5 py-1 text-[11px] font-medium text-slate-300"
+            className="rounded border border-zinc-700/70 bg-zinc-900 px-2.5 py-1 text-xs font-medium text-zinc-300"
           >
             {tool}
           </span>

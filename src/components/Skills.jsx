@@ -3,15 +3,15 @@ import SectionHeader from './SectionHeader'
 
 function SkillGroup({ group, skills }) {
   return (
-    <article className="rounded-xl border border-slate-800 bg-slate-900 p-5 sm:p-6">
-      <p className="mb-4 text-[10px] font-semibold uppercase tracking-widest text-sky-400">
+    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6">
+      <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-300">
         {group}
       </p>
       <div className="flex flex-wrap gap-1.5">
         {skills.map((skill) => (
           <span
             key={skill}
-            className="rounded border border-slate-700/60 bg-slate-800 px-2.5 py-1 text-[11px] font-medium text-slate-300"
+            className="rounded border border-zinc-700/60 bg-zinc-900 px-2.5 py-1 text-xs font-medium text-zinc-300"
           >
             {skill}
           </span>
@@ -36,14 +36,14 @@ export default function Skills() {
         ))}
       </div>
 
-      <div className="mt-8 rounded-xl border border-slate-800 bg-slate-900 p-5 sm:p-6">
-        <p className="mb-4 text-[10px] font-semibold uppercase tracking-widest text-sky-400">
+      <div className="mt-8 rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-violet-300">
           How I Work
         </p>
         <div className="grid gap-3 md:grid-cols-2">
           {operatingModes.map((mode) => (
-            <p key={mode} className="text-sm leading-6 text-slate-300">
-              <span className="mr-2 text-sky-400">/</span>
+            <p key={mode} className="text-base leading-7 text-zinc-300">
+              <span className="mr-2 text-teal-300">/</span>
               {mode}
             </p>
           ))}

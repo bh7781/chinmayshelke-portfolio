@@ -11,17 +11,17 @@ export default function Contact({ contactIntent, onRequestResume }) {
       />
 
       <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 sm:p-6">
-          <p className="text-sm font-semibold text-white">
+        <div className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6">
+          <p className="text-lg font-semibold text-white">
             Resume requests
           </p>
-          <p className="mt-3 text-sm leading-6 text-slate-400">
+          <p className="mt-3 text-base leading-7 text-zinc-400">
             I share my resume directly with genuine recruiters, hiring teams, and professional contacts.
           </p>
           <button
             type="button"
             onClick={onRequestResume}
-            className="mt-5 rounded-lg bg-sky-600 px-5 py-2.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-sky-500"
+            className="mt-5 rounded-lg bg-teal-500 px-5 py-2.5 text-base font-medium text-zinc-950 transition-colors duration-150 hover:bg-teal-300"
           >
             Request Resume
           </button>

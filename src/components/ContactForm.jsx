@@ -18,10 +18,10 @@ const initialForm = {
 }
 
 const inputClass =
-  'w-full rounded-lg border border-slate-700 bg-slate-950/70 px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition-colors duration-150 focus:border-sky-500'
+  'w-full rounded-lg border border-zinc-700 bg-black/40 px-3.5 py-2.5 text-base text-white placeholder-zinc-500 outline-none transition-colors duration-150 focus:border-teal-400'
 
 const labelClass =
-  'block text-[11px] font-semibold text-slate-400 uppercase tracking-widest mb-1.5'
+  'block text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-1.5'
 
 function validateForm({ name, email, purpose, message }) {
   if (!name.trim() || !email.trim() || !purpose.trim() || !message.trim()) {
@@ -97,7 +97,7 @@ export default function ContactForm({ focusKey, initialPurpose = '' }) {
     <form
       id="contact-form"
       onSubmit={handleSubmit}
-      className="rounded-xl border border-slate-800 bg-slate-900 p-5 shadow-xl shadow-slate-950/20 sm:p-6"
+      className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6"
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
@@ -234,7 +234,7 @@ export default function ContactForm({ focusKey, initialPurpose = '' }) {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full rounded-lg bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-400 sm:w-auto"
+          className="w-full rounded-lg bg-teal-500 px-5 py-2.5 text-base font-semibold text-zinc-950 transition-colors duration-150 hover:bg-teal-300 disabled:cursor-not-allowed disabled:bg-zinc-700 disabled:text-zinc-400 sm:w-auto"
         >
           {submitting ? 'Sending...' : 'Send Message'}
         </button>
