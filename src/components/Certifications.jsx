@@ -1,13 +1,13 @@
 import { certifications } from '../data'
 
-function CertificationCard({ title, issuer, badgeUrl, credentialUrl }) {
+function CertificationCard({ title, issuer, badgeImage, credentialUrl }) {
   return (
     <article className="bg-slate-900 border border-slate-800 rounded-xl p-5 sm:p-6 shadow-lg shadow-slate-950/20">
-      <div className="flex items-start gap-4 md:block">
+      <div className="flex items-start gap-5">
         <img
-          src={badgeUrl}
+          src={badgeImage}
           alt={`${title} badge`}
-          className="h-16 w-16 rounded-lg border border-slate-700 bg-slate-950 object-contain p-2 md:mb-5"
+          className="h-20 w-20 shrink-0 rounded-lg border border-slate-700 bg-slate-950 object-contain p-2"
         />
         <div className="min-w-0">
           <h3 className="text-sm font-semibold text-white leading-snug">
@@ -19,7 +19,7 @@ function CertificationCard({ title, issuer, badgeUrl, credentialUrl }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View credential for ${title} (opens in new tab)`}
-            className="mt-4 inline-flex text-xs font-medium text-sky-400 hover:text-sky-300 transition-colors duration-150"
+            className="mt-5 inline-flex rounded-lg border border-sky-700 px-3 py-2 text-xs font-medium text-sky-300 hover:border-sky-500 hover:bg-sky-600/10"
           >
             View Credential
           </a>
@@ -38,7 +38,7 @@ export default function Certifications() {
         </h2>
         <div className="flex-1 h-px bg-slate-800" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {certifications.map((certification) => (
           <CertificationCard key={certification.title} {...certification} />
         ))}

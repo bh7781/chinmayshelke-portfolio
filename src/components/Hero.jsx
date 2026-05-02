@@ -1,6 +1,6 @@
 export default function Hero({ onRequestResume }) {
   return (
-    <section id="about" className="pt-14 sm:pt-18 pb-20 scroll-mt-14">
+    <section id="about" className="pt-14 sm:pt-16 pb-20 scroll-mt-14">
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="order-2 lg:order-1">
           <p className="text-xs font-semibold text-sky-400 uppercase tracking-widest mb-5">
@@ -55,12 +55,12 @@ export default function Hero({ onRequestResume }) {
         </div>
 
         <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-          <div className="relative w-48 sm:w-60 lg:w-72">
-            <div className="absolute inset-0 rounded-3xl bg-sky-500/10 blur-2xl" aria-hidden="true" />
+          <div className="relative">
+            <div className="absolute inset-0 rounded-2xl bg-sky-500/10 blur-2xl" aria-hidden="true" />
             <img
               src="/assets/profile.jpg"
               alt="Chinmay Shelke professional profile photo"
-              className="relative aspect-[4/5] w-full rounded-3xl border border-slate-700/80 bg-slate-900 object-cover shadow-2xl shadow-slate-950/60"
+              className="relative h-64 w-52 rounded-2xl border border-slate-700/80 bg-slate-900 object-cover shadow-2xl shadow-slate-950/60 sm:h-80 sm:w-64 lg:h-96 lg:w-80"
             />
           </div>
         </div>

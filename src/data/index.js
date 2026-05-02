@@ -81,22 +81,16 @@ export const skillGroups = [
 
 export const certifications = [
   {
-    title: "Data Analytics Professional Certificate",
-    issuer: "Credential issuer placeholder",
-    badgeUrl: "/favicon.svg",
-    credentialUrl: "https://www.credly.com/",
+    title: "GitHub Copilot Certification",
+    issuer: "Microsoft / GitHub",
+    badgeImage: "/assets/certifications/github-copilot.png",
+    credentialUrl: "https://www.credly.com/badges/c5420635-17a9-4f2d-9c33-d7e9f09dffb9",
   },
   {
-    title: "AI and Machine Learning Certificate",
-    issuer: "Credential issuer placeholder",
-    badgeUrl: "/favicon.svg",
-    credentialUrl: "https://www.credly.com/",
-  },
-  {
-    title: "Business Intelligence Certificate",
-    issuer: "Credential issuer placeholder",
-    badgeUrl: "/favicon.svg",
-    credentialUrl: "https://www.credly.com/",
+    title: "MTA Software Development Fundamentals",
+    issuer: "Microsoft",
+    badgeImage: "/assets/certifications/mta-software-development-fundamentals-certified-2016.png",
+    credentialUrl: "https://www.credly.com/badges/49ae161e-a613-49bd-a80e-532af091dc81",
   },
 ]
 
