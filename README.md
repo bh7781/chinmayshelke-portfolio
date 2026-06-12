@@ -83,6 +83,8 @@ src/
 
 The project is deployed on Vercel. Before deploying, configure the Resend environment variables in the Vercel dashboard under Project Settings -> Environment Variables.
 
+The `chinmayshelke.com` domain is registered and managed through Namecheap. Its domain verification email is a dedicated Gmail address, shown here in privacy-safe form as `myd********@gmail.com`.
+
 ## About
 
 Built and maintained by [Chinmay Shelke](https://chinmayshelke.com).
