@@ -1,9 +1,10 @@
 import { operatingModes, skillGroups } from '../data'
+import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
 
 function SkillGroup({ group, skills }) {
   return (
-    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6">
+    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
       <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-300">
         {group}
       </p>
@@ -27,12 +28,14 @@ export default function Skills() {
       <SectionHeader
         eyebrow="Skills and Operating Style"
         title="A practical technical stack, shaped by delivery pressure."
-        description="The portfolio is strongest where analytics engineering, control logic, stakeholder communication, and team leadership overlap."
+        description="Strongest where analytics engineering, control logic, stakeholder communication, and team leadership overlap."
       />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {skillGroups.map((group) => (
-          <SkillGroup key={group.group} {...group} />
+        {skillGroups.map((group, index) => (
+          <Reveal key={group.group} delay={(index % 2) * 80} className="h-full">
+            <SkillGroup {...group} />
+          </Reveal>
         ))}
       </div>
 

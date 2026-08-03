@@ -35,7 +35,7 @@ function validateForm({ name, email, purpose, message }) {
   return ''
 }
 
-export default function ContactForm({ focusKey, initialPurpose = '' }) {
+export default function ContactForm({ focusKey, initialPurpose = '', bare = false }) {
   const [form, setForm] = useState(() => ({
     ...initialForm,
     purpose: initialPurpose,
@@ -45,7 +45,6 @@ export default function ContactForm({ focusKey, initialPurpose = '' }) {
   const nameRef = useRef(null)
 
   useEffect(() => {
-    if (!focusKey) return
     nameRef.current?.focus({ preventScroll: true })
   }, [focusKey])
 
@@ -81,7 +80,7 @@ export default function ContactForm({ focusKey, initialPurpose = '' }) {
       setForm(initialForm)
       setStatus({
         type: 'success',
-        message: 'Thank you. I will review your request and get back to you.',
+        message: "Thanks for reaching out — your message is in my inbox and I'll get back to you soon.",
       })
     } catch (error) {
       setStatus({
@@ -97,7 +96,11 @@ export default function ContactForm({ focusKey, initialPurpose = '' }) {
     <form
       id="contact-form"
       onSubmit={handleSubmit}
-      className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6"
+      className={
+        bare
+          ? 'p-4 sm:p-5'
+          : 'rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6'
+      }
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
@@ -211,7 +214,7 @@ export default function ContactForm({ focusKey, initialPurpose = '' }) {
             rows={5}
             value={form.message}
             onChange={handleChange}
-            placeholder="Share role details, context, or the reason for your request."
+            placeholder="Tell me a bit about the role, the project, or what you'd like to discuss."
             className={`${inputClass} resize-y`}
           />
         </div>

@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { careerTimeline } from '../data'
+import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -35,57 +37,87 @@ function formatDuration(totalMonths) {
 
 function companySpan(roles) {
   const start = roles[roles.length - 1].start
-  const end = roles.some((role) => !role.end)
-    ? null
-    : roles[0].end
+  const end = roles.some((role) => !role.end) ? null : roles[0].end
   return { start, end }
 }
 
-function RoleItem({ role, isLast }) {
+function RoleItem({ role, isLast, defaultOpen }) {
+  const [open, setOpen] = useState(defaultOpen)
+
   return (
-    <li className="relative pl-8 pb-8 last:pb-0">
+    <li className="relative pl-8 pb-6 last:pb-0">
       {!isLast && (
         <span className="absolute left-[5px] top-4 bottom-0 w-px bg-zinc-800" aria-hidden="true" />
       )}
       <span
-        className="absolute left-0 top-1.5 h-[11px] w-[11px] rounded-full border-2 border-teal-400 bg-zinc-950"
+        className="absolute left-0 top-2.5 h-[11px] w-[11px] rounded-full border-2 border-teal-400 bg-zinc-950"
         aria-hidden="true"
       />
-      <div className="group rounded-xl border border-transparent p-1 transition-colors duration-300 hover:border-zinc-800/60 hover:bg-zinc-900/40 sm:-mx-3 sm:px-4 sm:py-3">
-        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <h4 className="text-lg font-semibold text-white transition-colors duration-300 group-hover:text-teal-200">
-            {role.title}
-          </h4>
-          <span className="rounded-full border border-teal-400/20 bg-teal-400/10 px-2.5 py-0.5 text-xs font-medium text-teal-300">
-            {formatDuration(monthsBetween(role.start, role.end))}
-          </span>
-        </div>
-        <p className="mt-1 text-sm text-zinc-400">
-          {formatMonth(role.start)} - {formatMonth(role.end)}
-          <span className="mx-2 text-zinc-600">|</span>
-          {role.location}
-        </p>
-
-        <p className="mt-3 text-base leading-7 text-zinc-300">{role.summary}</p>
-
-        <ul className="mt-3 grid gap-1.5">
-          {role.highlights.map((highlight) => (
-            <li key={highlight} className="text-[15px] leading-7 text-zinc-400">
-              <span className="mr-2 text-teal-300">/</span>
-              {highlight}
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {role.skills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded border border-zinc-700/70 bg-zinc-900 px-2.5 py-1 text-xs font-medium text-zinc-300"
-            >
-              {skill}
+      <div
+        className={`rounded-xl border p-1 transition-colors duration-300 sm:-mx-3 sm:px-4 sm:py-3 ${
+          open ? 'border-zinc-800/60 bg-zinc-900/40' : 'border-transparent hover:border-zinc-800/60 hover:bg-zinc-900/40'
+        }`}
+      >
+        <button
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          aria-expanded={open}
+          className="group flex w-full items-start justify-between gap-3 text-left"
+        >
+          <span className="min-w-0">
+            <span className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <span className="text-lg font-semibold text-white transition-colors duration-300 group-hover:text-teal-200">
+                {role.title}
+              </span>
+              <span className="rounded-full border border-teal-400/20 bg-teal-400/10 px-2.5 py-0.5 text-xs font-medium text-teal-300">
+                {formatDuration(monthsBetween(role.start, role.end))}
+              </span>
             </span>
-          ))}
+            <span className="mt-1 block text-sm text-zinc-400">
+              {formatMonth(role.start)} - {formatMonth(role.end)}
+              <span className="mx-2 text-zinc-600">|</span>
+              {role.location}
+            </span>
+          </span>
+          <svg
+            className={`mt-1.5 h-4 w-4 shrink-0 text-zinc-500 transition-transform duration-300 group-hover:text-teal-300 ${open ? 'rotate-180' : ''}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+            open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+          }`}
+        >
+          <div className="overflow-hidden">
+            <p className="mt-3 text-base leading-7 text-zinc-300">{role.summary}</p>
+
+            <ul className="mt-3 grid gap-1.5">
+              {role.highlights.map((highlight) => (
+                <li key={highlight} className="text-[15px] leading-7 text-zinc-400">
+                  <span className="mr-2 text-teal-300">/</span>
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-4 flex flex-wrap gap-1.5 pb-1">
+              {role.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded border border-zinc-700/70 bg-zinc-900 px-2.5 py-1 text-xs font-medium text-zinc-300"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </li>
@@ -120,7 +152,12 @@ function CompanyCard({ company, location, logo, roles }) {
 
       <ol className="mt-6">
         {roles.map((role, index) => (
-          <RoleItem key={`${role.title}-${role.start}`} role={role} isLast={index === roles.length - 1} />
+          <RoleItem
+            key={`${role.title}-${role.start}`}
+            role={role}
+            isLast={index === roles.length - 1}
+            defaultOpen={!role.end}
+          />
         ))}
       </ol>
     </article>
@@ -139,7 +176,7 @@ export default function CareerTimeline() {
       <SectionHeader
         eyebrow="Career Timeline"
         title="From application development to analytics leadership."
-        description="A progression through software delivery, regulatory data analysis, management information, automation, controls, and client-facing leadership."
+        description="Software delivery, regulatory data analysis, automation, controls, and client-facing leadership — in one continuous progression."
       />
       <div className="max-w-4xl">
         <p className="mb-8 inline-flex items-baseline gap-3 rounded-xl border border-zinc-800 bg-zinc-950/75 px-5 py-3 shadow-lg shadow-black/20">
@@ -149,8 +186,10 @@ export default function CareerTimeline() {
           <span className="text-lg font-semibold text-white">{totalExperience}</span>
         </p>
         <div className="grid gap-8">
-          {careerTimeline.map((item) => (
-            <CompanyCard key={item.company} {...item} />
+          {careerTimeline.map((item, index) => (
+            <Reveal key={item.company} delay={index * 80}>
+              <CompanyCard {...item} />
+            </Reveal>
           ))}
         </div>
       </div>

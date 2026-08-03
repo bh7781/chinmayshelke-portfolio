@@ -1,9 +1,10 @@
 import { certifications } from '../data'
+import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
 
 function CertificationCard({ title, issuer, badgeImage, credentialUrl }) {
   return (
-    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 sm:p-6">
+    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
       <div className="flex items-start gap-5">
         <img
           src={badgeImage}
@@ -36,11 +37,13 @@ export default function Certifications() {
       <SectionHeader
         eyebrow="Credentials"
         title="Signals of continued learning"
-        description="Selected certifications and credential-backed badges relevant to software, AI tooling, and development fundamentals."
+        description="Selected certifications relevant to software, AI tooling, and development fundamentals."
       />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {certifications.map((certification) => (
-          <CertificationCard key={certification.title} {...certification} />
+        {certifications.map((certification, index) => (
+          <Reveal key={certification.title} delay={(index % 2) * 80} className="h-full">
+            <CertificationCard {...certification} />
+          </Reveal>
         ))}
       </div>
     </section>

@@ -8,7 +8,7 @@ export default function Hero({ onNavigate, onRequestResume }) {
         <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
           Chinmay Shelke
         </h1>
-        <p className="mt-4 max-w-3xl text-2xl font-semibold leading-snug text-zinc-100 sm:text-3xl">
+        <p className="mt-4 max-w-3xl bg-gradient-to-r from-teal-300 via-cyan-200 to-violet-300 bg-clip-text text-2xl font-semibold leading-snug text-transparent sm:text-3xl">
           Client-facing analytics leader for complex financial data.
         </p>
         <p className="mt-5 max-w-2xl text-lg font-medium leading-8 text-zinc-300">
@@ -53,10 +53,14 @@ export default function Hero({ onNavigate, onRequestResume }) {
 
       <div className="flex justify-center lg:justify-end">
         <div className="relative">
+          <div
+            className="absolute -inset-5 rounded-[2rem] bg-gradient-to-tr from-teal-500/35 via-transparent to-violet-500/35 blur-2xl"
+            aria-hidden="true"
+          />
           <img
             src="/assets/Chinmay.png"
             alt="Chinmay Shelke professional profile photo"
-            className="h-64 w-52 rounded-2xl border border-zinc-700/80 bg-zinc-950 object-cover shadow-2xl shadow-black/70 sm:h-80 sm:w-64 lg:h-96 lg:w-80"
+            className="relative h-64 w-52 rounded-2xl border border-zinc-700/80 bg-zinc-950 object-cover shadow-2xl shadow-black/70 ring-1 ring-teal-400/20 sm:h-80 sm:w-64 lg:h-96 lg:w-80"
           />
         </div>
       </div>

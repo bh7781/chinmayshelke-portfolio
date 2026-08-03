@@ -1,9 +1,10 @@
 import { articles } from '../data'
+import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
 
 function ArticleCard({ title, url, description }) {
   return (
-    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-150 hover:border-violet-600/60 sm:p-6">
+    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
       <h3 className="text-xl font-semibold leading-snug text-white">
         {title}
       </h3>
@@ -32,8 +33,10 @@ export default function Blogs() {
         description="Short, practical articles that explain engineering, BI, and machine learning concepts without making them heavier than they need to be."
       />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        {articles.map((article) => (
-          <ArticleCard key={article.url} {...article} />
+        {articles.map((article, index) => (
+          <Reveal key={article.url} delay={(index % 3) * 80} className="h-full">
+            <ArticleCard {...article} />
+          </Reveal>
         ))}
       </div>
     </section>

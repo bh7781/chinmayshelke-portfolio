@@ -1,4 +1,5 @@
 import { clientProjects } from '../data'
+import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
 
 const rows = [
@@ -11,7 +12,7 @@ function ClientProjectCard({ title, domain, context, contribution, impact, tools
   const content = { context, contribution, impact }
 
   return (
-    <article className="rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-150 hover:border-violet-600/60 sm:p-6">
+    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
       <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-teal-300">
         {domain}
       </p>
@@ -47,12 +48,14 @@ export default function ClientWork() {
     <section className="py-10 sm:py-14">
       <SectionHeader
         eyebrow="Client Work"
-        title="Real delivery work, presented without exposing sensitive client detail."
-        description="These are not fictional case studies. They are selected, anonymized examples of analytics, controls, automation, and data-quality work delivered in client environments."
+        title="Real delivery work, without the sensitive client detail."
+        description="Selected, anonymized examples of analytics, controls, automation, and data-quality work delivered in client environments."
       />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {clientProjects.map((project) => (
-          <ClientProjectCard key={project.title} {...project} />
+        {clientProjects.map((project, index) => (
+          <Reveal key={project.title} delay={(index % 2) * 80} className="h-full">
+            <ClientProjectCard {...project} />
+          </Reveal>
         ))}
       </div>
     </section>
