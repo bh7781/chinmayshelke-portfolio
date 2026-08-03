@@ -75,7 +75,7 @@ api/
 public/
   assets/                    # Profile and certification badge images
 src/
-  components/                # Portfolio sections and reusable UI
+  components/                # Portfolio sections and  reusable UI
   data/                      # Navigation, timeline, client work, skills, articles, certifications
 ```
 

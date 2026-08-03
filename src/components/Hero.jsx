@@ -54,7 +54,7 @@ export default function Hero({ onNavigate, onRequestResume }) {
       <div className="flex justify-center lg:justify-end">
         <div className="relative">
           <img
-            src="/assets/profile.jpg"
+            src="/assets/Chinmay.png"
             alt="Chinmay Shelke professional profile photo"
             className="h-64 w-52 rounded-2xl border border-zinc-700/80 bg-zinc-950 object-cover shadow-2xl shadow-black/70 sm:h-80 sm:w-64 lg:h-96 lg:w-80"
           />
