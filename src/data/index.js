@@ -33,92 +33,100 @@ export const profilePillars = [
 
 export const careerTimeline = [
   {
-    period: 'Oct 2025 - Present',
-    title: 'Senior Process Manager',
     company: 'eClerx',
     location: 'Pune, India',
     logo: '/assets/company_logos/eclerx.png',
-    summary:
-      'Leads client-facing analytics and control delivery for financial regulatory reporting workstreams, combining delivery ownership, team management, and technical governance.',
-    highlights: [
-      'Manages multiple testing, diagnostics, eligibility, reporting, and automation streams.',
-      'Acts as a bridge between client stakeholders, internal delivery teams, BAs, QA, and adjacent technology teams.',
-      'Drives quality gates, review discipline, stakeholder updates, and structured delivery communication.',
+    roles: [
+      {
+        title: 'Senior Process Manager',
+        start: '2025-10',
+        end: null,
+        location: 'Pune, India',
+        summary:
+          'Leads client-facing analytics and control delivery for financial regulatory reporting workstreams, combining delivery ownership, team management, and technical governance.',
+        highlights: [
+          'Manages multiple testing, diagnostics, eligibility, reporting, and automation streams.',
+          'Acts as a bridge between client stakeholders, internal delivery teams, BAs, QA, and adjacent technology teams.',
+          'Drives quality gates, review discipline, stakeholder updates, and structured delivery communication.',
+        ],
+        skills: ['Project Management', 'Machine Learning', 'Stakeholder Management', 'Governance'],
+      },
+      {
+        title: 'Process Manager',
+        start: '2023-11',
+        end: '2025-09',
+        location: 'India',
+        summary:
+          'Expanded from associate process management into formal process leadership across data science, analytics delivery, stakeholder management, and team leadership.',
+        highlights: [
+          'Managed delivery priorities across technical analysts and client-facing workstreams.',
+          'Converted ambiguous reporting and controls problems into structured analytics execution.',
+          'Mentored team members through SQL, Python, Alteryx, and reporting delivery challenges.',
+        ],
+        skills: ['Data Science', 'Team Leadership', 'Analytics Delivery', 'Power BI'],
+      },
+      {
+        title: 'Associate Process Manager',
+        start: '2022-04',
+        end: '2023-11',
+        location: 'Pune, India',
+        summary:
+          'Moved into broader ownership of testing methodology, reporting logic, process governance, and stakeholder-ready delivery artifacts.',
+        highlights: [
+          'Supported regulatory testing workstreams involving stratification, diagnostics, and eligibility analysis.',
+          'Helped standardize logic, documentation, evidence, and review workflows.',
+          'Produced structured outputs for management information and control-focused decision making.',
+        ],
+        skills: ['Regulatory Reporting', 'SQL', 'Alteryx', 'Process Governance'],
+      },
+      {
+        title: 'Senior Analyst',
+        start: '2019-01',
+        end: '2022-03',
+        location: 'Navi Mumbai, India',
+        summary:
+          'Built the hands-on analytics foundation across Python, SQL, data quality, statistical analysis, trade data, and dashboard-oriented reporting.',
+        highlights: [
+          'Worked with large-scale financial and regulatory datasets across multiple systems.',
+          'Built and maintained analysis logic, exception workflows, and reporting outputs.',
+          'Developed strong working knowledge of data quality, reconciliation, and reporting controls.',
+        ],
+        skills: ['Python', 'SQL', 'Statistical Analysis', 'Data Quality'],
+      },
     ],
-    skills: ['Project Management', 'Machine Learning', 'Stakeholder Management', 'Governance'],
   },
   {
-    period: 'Nov 2023 - Sep 2025',
-    title: 'Process Manager',
-    company: 'eClerx',
-    location: 'India',
-    logo: '/assets/company_logos/eclerx.png',
-    summary:
-      'Expanded from associate process management into formal process leadership across data science, analytics delivery, stakeholder management, and team leadership.',
-    highlights: [
-      'Managed delivery priorities across technical analysts and client-facing workstreams.',
-      'Converted ambiguous reporting and controls problems into structured analytics execution.',
-      'Mentored team members through SQL, Python, Alteryx, and reporting delivery challenges.',
-    ],
-    skills: ['Data Science', 'Team Leadership', 'Analytics Delivery', 'Power BI'],
-  },
-  {
-    period: 'Apr 2022 - Nov 2023',
-    title: 'Associate Process Manager',
-    company: 'eClerx',
-    location: 'Pune, India',
-    logo: '/assets/company_logos/eclerx.png',
-    summary:
-      'Moved into broader ownership of testing methodology, reporting logic, process governance, and stakeholder-ready delivery artifacts.',
-    highlights: [
-      'Supported regulatory testing workstreams involving stratification, diagnostics, and eligibility analysis.',
-      'Helped standardize logic, documentation, evidence, and review workflows.',
-      'Produced structured outputs for management information and control-focused decision making.',
-    ],
-    skills: ['Regulatory Reporting', 'SQL', 'Alteryx', 'Process Governance'],
-  },
-  {
-    period: 'Jan 2019 - Mar 2022',
-    title: 'Senior Analyst',
-    company: 'eClerx',
-    location: 'Navi Mumbai, India',
-    logo: '/assets/company_logos/eclerx.png',
-    summary:
-      'Built the hands-on analytics foundation across Python, SQL, data quality, statistical analysis, trade data, and dashboard-oriented reporting.',
-    highlights: [
-      'Worked with large-scale financial and regulatory datasets across multiple systems.',
-      'Built and maintained analysis logic, exception workflows, and reporting outputs.',
-      'Developed strong working knowledge of data quality, reconciliation, and reporting controls.',
-    ],
-    skills: ['Python', 'SQL', 'Statistical Analysis', 'Data Quality'],
-  },
-  {
-    period: 'Apr 2018 - Jan 2019',
-    title: 'Application Development Analyst',
     company: 'Accenture in India',
     location: 'Pune, India',
     logo: '/assets/company_logos/accenture.png',
-    summary:
-      'Continued software delivery experience while moving closer to data-driven and supervised learning oriented work.',
-    highlights: [
-      'Worked in application development with exposure to Java and analytical problem solving.',
-      'Built engineering discipline that later supported automation and analytics architecture work.',
+    roles: [
+      {
+        title: 'Application Development Analyst',
+        start: '2018-04',
+        end: '2019-01',
+        location: 'Pune, India',
+        summary:
+          'Continued software delivery experience while moving closer to data-driven and supervised learning oriented work.',
+        highlights: [
+          'Worked in application development with exposure to Java and analytical problem solving.',
+          'Built engineering discipline that later supported automation and analytics architecture work.',
+        ],
+        skills: ['Java', 'Supervised Learning', 'Application Development'],
+      },
+      {
+        title: 'Application Development Associate',
+        start: '2016-11',
+        end: '2018-03',
+        location: 'Pune, India',
+        summary:
+          'Started professional career in application development, building a software-first foundation before moving into analytics and data leadership.',
+        highlights: [
+          'Learned delivery discipline, enterprise workflows, and production-oriented development habits.',
+          'Built early experience translating requirements into working technical outputs.',
+        ],
+        skills: ['Software Delivery', 'Enterprise Systems', 'Development Fundamentals'],
+      },
     ],
-    skills: ['Java', 'Supervised Learning', 'Application Development'],
-  },
-  {
-    period: 'Nov 2016 - Mar 2018',
-    title: 'Application Development Associate',
-    company: 'Accenture in India',
-    location: 'Pune, India',
-    logo: '/assets/company_logos/accenture.png',
-    summary:
-      'Started professional career in application development, building a software-first foundation before moving into analytics and data leadership.',
-    highlights: [
-      'Learned delivery discipline, enterprise workflows, and production-oriented development habits.',
-      'Built early experience translating requirements into working technical outputs.',
-    ],
-    skills: ['Software Delivery', 'Enterprise Systems', 'Development Fundamentals'],
   },
 ]
 
