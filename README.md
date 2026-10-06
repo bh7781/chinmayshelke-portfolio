@@ -1,12 +1,12 @@
 # Chinmay Shelke Portfolio
 
-A portfolio built to present my work across data analytics, AI/ML, analytics automation, data quality, and regulatory reporting.
+A personal site presenting my work across data analytics, AI/ML, analytics automation, data quality, and regulatory reporting.
 
 **Live site:** [chinmayshelke.com](https://chinmayshelke.com)
 
 ## What This Portfolio Highlights
 
-- Lead Data Analyst positioning with a recruiter-friendly landing experience
+- Profile, experience and projects for a Lead Data Analyst
 - Impact metrics and client project highlights for analytics, automation, and data quality work
 - Skills across Python, SQL, Snowflake, PySpark, Alteryx, Power BI, and ML workflows
 - Certifications with local badge assets linked to Credly credentials
@@ -20,6 +20,10 @@ A portfolio built to present my work across data analytics, AI/ML, analytics aut
 - Tailwind CSS
 - Vercel
 - Resend for server-side contact email delivery
+
+## Location and Clock
+
+The location label and live clock come from `profile.location` and `profile.timeZone` in `src/data/index.js`. Change those two values (for example `'Glasgow, UK'` and `'Europe/London'`) and every page updates.
 
 ## Privacy-First Contact Flow
 
@@ -83,7 +87,7 @@ src/
 
 The project is deployed on Vercel. Before deploying, configure the Resend environment variables in the Vercel dashboard under Project Settings -> Environment Variables.
 
-The `chinmayshelke.com` domain is registered and managed through Namecheap. Its domain verification email is a dedicated Gmail address, shown here in privacy-safe form as `myd********@gmail.com`.
+The `chinmayshelke.com` domain is registered and managed through Namecheap.
 
 ## About
 

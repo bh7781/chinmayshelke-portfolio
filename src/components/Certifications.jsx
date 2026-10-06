@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader'
 
 function CertificationCard({ title, issuer, badgeImage, credentialUrl }) {
   return (
-    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
+    <article className="h-full card p-5 sm:p-6">
       <div className="flex items-start gap-5">
         <img
           src={badgeImage}
@@ -36,8 +36,7 @@ export default function Certifications() {
     <section className="pb-16">
       <SectionHeader
         eyebrow="Credentials"
-        title="Signals of continued learning"
-        description="Selected certifications relevant to software, AI tooling, and development fundamentals."
+        title="Certifications"
       />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {certifications.map((certification, index) => (

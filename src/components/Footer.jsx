@@ -1,4 +1,5 @@
-import { navItems } from '../data'
+import { navItems, profile } from '../data'
+import SocialLinks from './SocialLinks'
 
 export default function Footer({ onNavigate }) {
   const year = new Date().getFullYear()
@@ -8,10 +9,11 @@ export default function Footer({ onNavigate }) {
       <div className="mx-auto max-w-6xl px-5 py-10 sm:px-6">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-sm">
-            <p className="text-lg font-semibold tracking-tight text-white">Chinmay Shelke</p>
+            <p className="text-lg font-semibold tracking-tight text-white">{profile.name}</p>
             <p className="mt-2 text-sm leading-6 text-zinc-400">
-              Client-facing analytics leader for complex financial data — Python, SQL, automation, and regulatory reporting controls.
+              {profile.headline} · {profile.location}
             </p>
+            <SocialLinks className="mt-4" />
           </div>
 
           <nav aria-label="Footer">
@@ -32,7 +34,7 @@ export default function Footer({ onNavigate }) {
         </div>
 
         <div className="mt-8 flex flex-col gap-2 border-t border-zinc-800/80 pt-6 text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} Chinmay Shelke. All rights reserved.</p>
+          <p>© {year} {profile.name}. All rights reserved.</p>
           <p>Built with React, Vite, and Tailwind CSS. Deployed on Vercel.</p>
         </div>
       </div>

@@ -12,7 +12,7 @@ function ClientProjectCard({ title, domain, context, contribution, impact, tools
   const content = { context, contribution, impact }
 
   return (
-    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
+    <article className="h-full card p-5 sm:p-6">
       <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-teal-300">
         {domain}
       </p>
@@ -47,9 +47,9 @@ export default function ClientWork() {
   return (
     <section className="py-10 sm:py-14">
       <SectionHeader
-        eyebrow="Client Work"
-        title="Real delivery work, without the sensitive client detail."
-        description="Selected, anonymized examples of analytics, controls, automation, and data-quality work delivered in client environments."
+        eyebrow="Projects"
+        title="Selected projects"
+        description="Examples of analytics, controls, automation and data-quality work from client engagements. Client details are anonymised."
       />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {clientProjects.map((project, index) => (

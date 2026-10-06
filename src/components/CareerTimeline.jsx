@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { careerTimeline } from '../data'
+import { careerTimeline, education } from '../data'
 import Reveal from './Reveal'
 import SectionHeader from './SectionHeader'
 
@@ -73,6 +73,9 @@ function RoleItem({ role, isLast, defaultOpen }) {
                 {formatDuration(monthsBetween(role.start, role.end))}
               </span>
             </span>
+            {role.designation && (
+              <span className="mt-1 block text-sm font-medium text-teal-300">{role.designation}</span>
+            )}
             <span className="mt-1 block text-sm text-zinc-400">
               {formatMonth(role.start)} - {formatMonth(role.end)}
               <span className="mx-2 text-zinc-600">|</span>
@@ -131,7 +134,7 @@ function CompanyCard({ company, location, logo, roles }) {
   return (
     <article className="rounded-2xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-zinc-700 sm:p-7">
       <header className="flex items-start gap-4 border-b border-zinc-800 pb-5 sm:gap-5">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-zinc-700 bg-white p-2 shadow-lg shadow-black/20 sm:h-16 sm:w-16">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-zinc-700 bg-[#ffffff] p-2 shadow-lg shadow-black/20 sm:h-16 sm:w-16">
           <img src={logo} alt={`${company} logo`} className="max-h-full max-w-full object-contain" />
         </div>
         <div className="min-w-0">
@@ -174,9 +177,9 @@ export default function CareerTimeline() {
   return (
     <section className="py-10 sm:py-14">
       <SectionHeader
-        eyebrow="Career Timeline"
-        title="From application development to analytics leadership."
-        description="Software delivery, regulatory data analysis, automation, controls, and client-facing leadership — in one continuous progression."
+        eyebrow="Experience"
+        title="Career history"
+        description="From application development to data analytics and regulatory reporting."
       />
       <div className="max-w-4xl">
         <p className="mb-8 inline-flex items-baseline gap-3 rounded-xl border border-zinc-800 bg-zinc-950/75 px-5 py-3 shadow-lg shadow-black/20">
@@ -192,6 +195,31 @@ export default function CareerTimeline() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal>
+          <article className="card mt-8 flex items-start gap-4 p-5 sm:p-7">
+            <span
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-teal-400/20 to-violet-400/20 text-teal-300"
+              aria-hidden="true"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 10 12 5 2 10l10 5 10-5z" />
+                <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+              </svg>
+            </span>
+            <div className="min-w-0">
+              <p className="text-xs font-semibold uppercase tracking-widest text-teal-300">Education</p>
+              <h3 className="mt-1 text-xl font-semibold text-white">{education.degree}</h3>
+              <p className="mt-1 text-sm leading-6 text-zinc-400">
+                {education.institution}
+                <span className="mx-2 text-zinc-600">|</span>
+                {education.university}
+                <span className="mx-2 text-zinc-600">|</span>
+                {education.year}
+              </p>
+            </div>
+          </article>
+        </Reveal>
       </div>
     </section>
   )

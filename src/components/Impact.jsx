@@ -67,10 +67,10 @@ function MetricCard({ stat, label }) {
   const isLong = stat.length > 5
 
   return (
-    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
+    <article className="h-full card p-5 sm:p-6">
       <CountUpStat
         stat={stat}
-        className={`mb-2 font-semibold leading-none tracking-tight text-white ${isLong ? 'text-xl sm:text-2xl' : 'text-3xl'}`}
+        className={`gradient-text mb-2 font-display font-semibold leading-none tracking-tight ${isLong ? 'text-xl sm:text-2xl' : 'text-3xl'}`}
       />
       <p className="text-base leading-7 text-zinc-400">{label}</p>
     </article>
@@ -81,9 +81,8 @@ export default function Impact() {
   return (
     <section className="pb-16">
       <SectionHeader
-        eyebrow="Snapshot"
-        title="The profile in numbers"
-        description="Scale, ownership, and the environments this work operates in."
+        eyebrow="Summary"
+        title="Key figures"
       />
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
         {metrics.map(({ stat, label }, index) => (

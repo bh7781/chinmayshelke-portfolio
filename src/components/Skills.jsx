@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader'
 
 function SkillGroup({ group, skills }) {
   return (
-    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
+    <article className="h-full card p-5 sm:p-6">
       <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-300">
         {group}
       </p>
@@ -26,9 +26,9 @@ export default function Skills() {
   return (
     <section className="py-10 sm:py-14">
       <SectionHeader
-        eyebrow="Skills and Operating Style"
-        title="A practical technical stack, shaped by delivery pressure."
-        description="Strongest where analytics engineering, control logic, stakeholder communication, and team leadership overlap."
+        eyebrow="Skills"
+        title="Tools and strengths"
+        description="Technical skills used day to day, along with the leadership side of the work."
       />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

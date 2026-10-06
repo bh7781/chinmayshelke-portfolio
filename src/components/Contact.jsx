@@ -1,4 +1,5 @@
 import SectionHeader from './SectionHeader'
+import SocialLinks from './SocialLinks'
 
 export default function Contact({ onOpenForm, onRequestResume }) {
   return (
@@ -6,7 +7,7 @@ export default function Contact({ onOpenForm, onRequestResume }) {
       <SectionHeader
         eyebrow="Contact"
         title="Let's talk."
-        description="Hiring for a data role, exploring a collaboration, or just have a question about my work? Drop me a message — I usually reply within a day or two."
+        description="For a role, a collaboration or a question about my work, send a message through the form. You can also find me on LinkedIn and GitHub."
       />
 
       <div className="flex flex-wrap gap-3">
@@ -25,6 +26,8 @@ export default function Contact({ onOpenForm, onRequestResume }) {
           Request Resume
         </button>
       </div>
+
+      <SocialLinks className="mt-6" />
     </section>
   )
 }

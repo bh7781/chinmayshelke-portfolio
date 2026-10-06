@@ -1,33 +1,43 @@
+export const profile = {
+  name: 'Chinmay Shelke',
+  headline: 'Lead Data Analyst',
+  // Change these two values when relocating; the clock and all location labels follow.
+  location: 'Pune, India',
+  timeZone: 'Asia/Kolkata',
+  linkedin: 'https://www.linkedin.com/in/chinmay-shelke/',
+  github: 'https://github.com/bh7781',
+}
+
 export const navItems = [
   { id: 'overview', label: 'Overview' },
-  { id: 'timeline', label: 'Timeline' },
-  { id: 'client-work', label: 'Client Work' },
+  { id: 'timeline', label: 'Experience' },
+  { id: 'client-work', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'writing', label: 'Writing' },
   { id: 'contact', label: 'Contact' },
 ]
 
 export const metrics = [
-  { stat: '9+', label: 'Years across data, analytics, and financial services delivery' },
-  { stat: '~5M', label: 'Trades processed per reporting cycle across control workflows' },
-  { stat: 'EUR 1.6M', label: 'Annualised savings delivered through automation and process improvement' },
-  { stat: '5', label: 'Direct delegates managed, coached, and reviewed' },
-  { stat: '40K+', label: 'Exceptions classified through repeatable root-cause frameworks' },
-  { stat: '10 regimes', label: 'EMIR, SFTR, ASIC, MAS, JFSA, HKMA, CFTC, SEC, CSA, and CAT' },
+  { stat: '10+', label: 'Years in software, data, and analytics' },
+  { stat: '~5M', label: 'Trades covered per reporting cycle in control workflows' },
+  { stat: 'EUR 1.6M', label: 'Annualised savings from automation and process improvement' },
+  { stat: '5', label: 'Direct reports managed and mentored' },
+  { stat: '40K+', label: 'Exceptions classified using a repeatable root-cause method' },
+  { stat: '10 regimes', label: 'EMIR, SFTR, ASIC, MAS, JFSA, HKMA, CFTC, SEC, CSA, CAT' },
 ]
 
 export const profilePillars = [
   {
-    title: 'Client-Facing Analytics Lead',
-    text: 'Owns messy, cross-functional analytics work where regulatory context, data logic, delivery governance, and stakeholder clarity all matter.',
+    title: 'Analytics and testing',
+    text: 'Analysis, testing and diagnostics for regulatory reporting, working with client stakeholders and cross-functional teams.',
   },
   {
-    title: 'Automation and Controls Builder',
-    text: 'Turns manual workflows, fragmented scripts, and recurring checks into reusable Python, SQL, Alteryx, and Power BI driven systems.',
+    title: 'Automation',
+    text: 'Replaces manual workflows and scattered scripts with reusable Python, SQL, Alteryx and Power BI solutions.',
   },
   {
-    title: 'People and Quality Manager',
-    text: 'Leads team delivery, feedback, mentoring, review discipline, and business-safe communication for client and internal stakeholders.',
+    title: 'Team and delivery',
+    text: 'Manages team delivery, reviews and mentoring, and keeps client and internal stakeholders updated.',
   },
 ]
 
@@ -39,17 +49,18 @@ export const careerTimeline = [
     roles: [
       {
         title: 'Senior Process Manager',
+        designation: 'Working as Lead Data Analyst',
         start: '2025-10',
         end: null,
         location: 'Pune, India',
         summary:
-          'Leads client-facing analytics and control delivery for financial regulatory reporting workstreams, combining delivery ownership, team management, and technical governance.',
+          'Leads analytics and control delivery for financial regulatory reporting workstreams, covering delivery, team management and technical governance.',
         highlights: [
           'Manages multiple testing, diagnostics, eligibility, reporting, and automation streams.',
-          'Acts as a bridge between client stakeholders, internal delivery teams, BAs, QA, and adjacent technology teams.',
-          'Drives quality gates, review discipline, stakeholder updates, and structured delivery communication.',
+          'Works between client stakeholders, delivery teams, business analysts, QA and technology teams.',
+          'Runs quality checks, reviews and regular stakeholder updates.',
         ],
-        skills: ['Project Management', 'Machine Learning', 'Stakeholder Management', 'Governance'],
+        skills: ['Project Management', 'Stakeholder Management', 'Governance', 'Python', 'SQL'],
       },
       {
         title: 'Process Manager',
@@ -57,10 +68,10 @@ export const careerTimeline = [
         end: '2025-09',
         location: 'India',
         summary:
-          'Expanded from associate process management into formal process leadership across data science, analytics delivery, stakeholder management, and team leadership.',
+          'Led analytics delivery, data science work and a team of analysts for regulatory reporting clients.',
         highlights: [
           'Managed delivery priorities across technical analysts and client-facing workstreams.',
-          'Converted ambiguous reporting and controls problems into structured analytics execution.',
+          'Turned loosely defined reporting and controls problems into structured analytics tasks.',
           'Mentored team members through SQL, Python, Alteryx, and reporting delivery challenges.',
         ],
         skills: ['Data Science', 'Team Leadership', 'Analytics Delivery', 'Power BI'],
@@ -71,7 +82,7 @@ export const careerTimeline = [
         end: '2023-11',
         location: 'Pune, India',
         summary:
-          'Moved into broader ownership of testing methodology, reporting logic, process governance, and stakeholder-ready delivery artifacts.',
+          'Worked on testing methodology, reporting logic and process governance for regulatory reporting.',
         highlights: [
           'Supported regulatory testing workstreams involving stratification, diagnostics, and eligibility analysis.',
           'Helped standardize logic, documentation, evidence, and review workflows.',
@@ -85,18 +96,18 @@ export const careerTimeline = [
         end: '2022-03',
         location: 'Navi Mumbai, India',
         summary:
-          'Built the hands-on analytics foundation across Python, SQL, data quality, statistical analysis, trade data, and dashboard-oriented reporting.',
+          'Hands-on analytics with Python and SQL: data quality, statistical analysis, trade data and dashboard reporting.',
         highlights: [
           'Worked with large-scale financial and regulatory datasets across multiple systems.',
           'Built and maintained analysis logic, exception workflows, and reporting outputs.',
-          'Developed strong working knowledge of data quality, reconciliation, and reporting controls.',
+          'Worked on data quality, reconciliation and reporting controls.',
         ],
         skills: ['Python', 'SQL', 'Statistical Analysis', 'Data Quality'],
       },
     ],
   },
   {
-    company: 'Accenture in India',
+    company: 'Accenture',
     location: 'Pune, India',
     logo: '/assets/company_logos/accenture.png',
     roles: [
@@ -106,12 +117,12 @@ export const careerTimeline = [
         end: '2019-01',
         location: 'Pune, India',
         summary:
-          'Continued software delivery experience while moving closer to data-driven and supervised learning oriented work.',
+          'Application development in Java, with growing exposure to data-driven work.',
         highlights: [
           'Worked in application development with exposure to Java and analytical problem solving.',
-          'Built engineering discipline that later supported automation and analytics architecture work.',
+          'Built the engineering habits later used in automation and analytics work.',
         ],
-        skills: ['Java', 'Supervised Learning', 'Application Development'],
+        skills: ['Java', 'Application Development'],
       },
       {
         title: 'Application Development Associate',
@@ -119,16 +130,23 @@ export const careerTimeline = [
         end: '2018-03',
         location: 'Pune, India',
         summary:
-          'Started professional career in application development, building a software-first foundation before moving into analytics and data leadership.',
+          'Started my career in application development, working on enterprise software delivery.',
         highlights: [
-          'Learned delivery discipline, enterprise workflows, and production-oriented development habits.',
-          'Built early experience translating requirements into working technical outputs.',
+          'Worked in enterprise delivery workflows and production development practices.',
+          'Turned business requirements into working software.',
         ],
         skills: ['Software Delivery', 'Enterprise Systems', 'Development Fundamentals'],
       },
     ],
   },
 ]
+
+export const education = {
+  degree: 'B.E. (Information Technology)',
+  institution: 'Sinhgad Institute of Technology and Science, Narhe, Pune',
+  university: 'Savitribai Phule Pune University',
+  year: '2016',
+}
 
 export const clientProjects = [
   {
@@ -151,7 +169,7 @@ export const clientProjects = [
       'Translated reporting issues into structured diagnostic rules, JIRA-ready descriptions, validation queries, and evidence-friendly outputs.',
     impact:
       'Reduced ambiguity in rule implementation and strengthened traceability from issue definition through testing and sign-off.',
-    tools: ['Snowflake SQL', 'JIRA', 'Pantheon', 'Data Quality'],
+    tools: ['Snowflake SQL', 'JIRA', 'Internal DQ tool', 'Data Quality'],
   },
   {
     title: 'Regulatory Trade Eligibility Control',
@@ -219,10 +237,10 @@ export const skillGroups = [
 ]
 
 export const operatingModes = [
-  'Convert ambiguous control problems into structured analytics logic',
-  'Build repeatable workflows from manual or fragmented processes',
-  'Explain technical methods in business-safe language for stakeholders',
-  'Lead people, reviews, feedback, and delivery quality without losing technical depth',
+  'Break down loosely defined control problems into clear analytics logic',
+  'Replace manual or scattered processes with repeatable workflows',
+  'Explain technical methods to stakeholders in plain language',
+  'Lead people, reviews and delivery quality while staying hands-on',
 ]
 
 export const certifications = [

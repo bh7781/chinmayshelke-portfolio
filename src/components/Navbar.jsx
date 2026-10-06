@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { navItems } from '../data'
+import { navItems, profile } from '../data'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar({ activeView, onNavigate }) {
   const [open, setOpen] = useState(false)
@@ -15,11 +16,18 @@ export default function Navbar({ activeView, onNavigate }) {
         <button
           type="button"
           onClick={() => handleNavigate('overview')}
-          className="text-left text-base font-semibold tracking-tight text-white"
+          className="flex items-center gap-2.5 text-left font-display text-base font-semibold tracking-tight text-white"
         >
-          Chinmay Shelke
+          <span
+            className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-teal-400 to-violet-500 text-xs font-bold text-white"
+            aria-hidden="true"
+          >
+            CS
+          </span>
+          {profile.name}
         </button>
 
+        <div className="flex items-center gap-3">
         <ul className="hidden list-none items-center gap-1 p-0 m-0 md:flex">
           {navItems.map(({ id, label }) => {
             const active = activeView === id
@@ -43,6 +51,8 @@ export default function Navbar({ activeView, onNavigate }) {
           })}
         </ul>
 
+        <ThemeToggle />
+
         <button
           type="button"
           className="text-zinc-400 transition-colors hover:text-white md:hidden"
@@ -61,6 +71,7 @@ export default function Navbar({ activeView, onNavigate }) {
             </svg>
           )}
         </button>
+        </div>
       </div>
 
       {open && (

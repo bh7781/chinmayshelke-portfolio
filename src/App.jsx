@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
+import LocalClock from './components/LocalClock'
 import Overview from './components/Overview'
 import CareerTimeline from './components/CareerTimeline'
 import ClientWork from './components/ClientWork'
@@ -10,7 +11,7 @@ import Contact from './components/Contact'
 import ContactModal from './components/ContactModal'
 import Footer from './components/Footer'
 import ScrollTopButton from './components/ScrollTopButton'
-import { navItems } from './data'
+import { navItems, profile } from './data'
 
 const validViews = navItems.map((item) => item.id)
 
@@ -31,6 +32,14 @@ export default function App() {
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
+
+  useEffect(() => {
+    const label = navItems.find((item) => item.id === activeView)?.label
+    document.title =
+      activeView === 'overview' || !label
+        ? `${profile.name} | ${profile.headline}`
+        : `${label} | ${profile.name}`
+  }, [activeView])
 
   const navigateTo = (view) => {
     if (view === activeView) {
@@ -84,8 +93,9 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,#050505_0%,#0d1117_42%,#15101f_100%)] text-zinc-200">
+    <div className="app-bg min-h-screen text-zinc-200">
       <Navbar activeView={activeView} onNavigate={navigateTo} />
+      <LocalClock />
       <main className="mx-auto min-h-[calc(100vh-3.5rem)] max-w-6xl px-5 sm:px-6">
         <div key={activeView} className="animate-view">
           {renderView()}

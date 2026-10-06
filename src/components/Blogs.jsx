@@ -4,7 +4,7 @@ import SectionHeader from './SectionHeader'
 
 function ArticleCard({ title, url, description }) {
   return (
-    <article className="h-full rounded-xl border border-zinc-800 bg-zinc-950/75 p-5 shadow-xl shadow-black/20 transition-colors duration-300 hover:border-teal-500/40 sm:p-6">
+    <article className="h-full card p-5 sm:p-6">
       <h3 className="text-xl font-semibold leading-snug text-white">
         {title}
       </h3>
@@ -29,8 +29,8 @@ export default function Blogs() {
     <section className="py-10 sm:py-14">
       <SectionHeader
         eyebrow="Writing"
-        title="Technical writing with a bias for clarity."
-        description="Short, practical articles that explain engineering, BI, and machine learning concepts without making them heavier than they need to be."
+        title="Articles"
+        description="Short articles on programming, BI and machine learning, published on Medium."
       />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {articles.map((article, index) => (
