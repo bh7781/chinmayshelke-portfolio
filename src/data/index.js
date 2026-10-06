@@ -227,6 +227,12 @@ export const operatingModes = [
 
 export const certifications = [
   {
+    title: 'Claude Certified Architect - Foundations',
+    issuer: 'Anthropic',
+    badgeImage: '/assets/certifications/claude-certified-architect-foundations.png',
+    credentialUrl: 'https://www.credly.com/badges/47deeef2-9dda-4923-9cff-32aa1905d182/public_url',
+  },
+  {
     title: 'GitHub Copilot Certification',
     issuer: 'Microsoft / GitHub',
     badgeImage: '/assets/certifications/github-copilot.png',
